@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Jelly : MonoBehaviour
 {
-
+    public int tempGelatin;
     float waitTime, speedX, speedY, leftX, rightX, topY, botY;
     bool isInitializedX = false, isInitializedY = false;
 
@@ -25,6 +25,7 @@ public class Jelly : MonoBehaviour
 
     void Awake()
     {
+        tempGelatin = 1000;
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
 
@@ -66,6 +67,11 @@ public class Jelly : MonoBehaviour
         if (topY < transform.position.y || botY > transform.position.y)
         {
             isInitializedY = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            tempGelatin++;
         }
     }
 

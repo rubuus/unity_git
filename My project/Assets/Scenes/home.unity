@@ -622,7 +622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b9c04608200d34891f94358962c0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 1000
 --- !u!4 &565093578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8171373853705526922, guid: 31c8c27dfb42da54e9548d06b9d705f3, type: 3}
@@ -1859,7 +1858,7 @@ GameObject:
   - component: {fileID: 1694085806}
   - component: {fileID: 1694085809}
   m_Layer: 0
-  m_Name: Jelly 0
+  m_Name: Jelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1966,6 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c6089d186bcca4479c7c3d16ac368e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempGelatin: 0
   topLeft: {fileID: 2073924467}
   bottomRight: {fileID: 476559992}
 --- !u!1 &1712427291

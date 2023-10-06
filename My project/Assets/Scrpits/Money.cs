@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class Money : MonoBehaviour
 {
-    public int money = 1000;
+    int money;
 
     Text text;
+    GameObject jelly;
 
     void Start()
     {
+        jelly = GameObject.Find("Jelly");
+        money = jelly.GetComponent<Jelly>().tempGelatin;
         text = GetComponent<Text>();
         
         text.text = money.ToString();
@@ -18,6 +21,7 @@ public class Money : MonoBehaviour
 
     void LateUpdate()
     {
-
+        money = jelly.GetComponent<Jelly>().tempGelatin;
+        text.text = money.ToString();
     }
 }
