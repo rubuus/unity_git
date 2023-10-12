@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 8726209}
   - component: {fileID: 8726210}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: BGM Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.498
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1558,6 +1558,7 @@ GameObject:
   - component: {fileID: 496770681}
   - component: {fileID: 496770683}
   - component: {fileID: 496770682}
+  - component: {fileID: 496770684}
   m_Layer: 5
   m_Name: Option Panel
   m_TagString: Untagged
@@ -1623,6 +1624,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496770680}
   m_CullTransparentMesh: 1
+--- !u!114 &496770684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496770680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6c88a09b6735840898bedc3ff16f9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &516392829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,6 +2056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611716262}
   - component: {fileID: 611716263}
+  - component: {fileID: 611716264}
   m_Layer: 0
   m_Name: SFX Player
   m_TagString: Untagged
@@ -2161,6 +2175,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &611716264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611716261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49238e77287db454ab42443636a3802a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &651109885
 GameObject:
   m_ObjectHideFlags: 0
@@ -5150,6 +5176,7 @@ GameObject:
   - component: {fileID: 1599342275}
   - component: {fileID: 1599342274}
   - component: {fileID: 1599342273}
+  - component: {fileID: 1599342276}
   m_Layer: 5
   m_Name: Resume Button
   m_TagString: Untagged
@@ -5259,6 +5286,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599342271}
   m_CullTransparentMesh: 1
+--- !u!114 &1599342276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599342271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cc8fb010ff4d74090600504af08e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1605351047
 GameObject:
   m_ObjectHideFlags: 0
@@ -5632,8 +5671,9 @@ GameObject:
   - component: {fileID: 1712015068}
   - component: {fileID: 1712015067}
   - component: {fileID: 1712015066}
+  - component: {fileID: 1712015069}
   m_Layer: 5
-  m_Name: Resume Button
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5741,6 +5781,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712015064}
   m_CullTransparentMesh: 1
+--- !u!114 &1712015069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712015064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808b7d9ed3c2dd044b985b96d27f7244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1712427291
 GameObject:
   m_ObjectHideFlags: 0
@@ -6865,6 +6917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112070575}
   - component: {fileID: 2112070576}
+  - component: {fileID: 2112070577}
   m_Layer: 0
   m_Name: BGM player
   m_TagString: Untagged
@@ -6899,7 +6952,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fbd50b6f750f01a42a40ead806f44a8e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.458
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6983,6 +7036,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2112070577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112070574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c9e41e9b34abc489139700d28960c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2116200315
 GameObject:
   m_ObjectHideFlags: 0
@@ -7102,7 +7167,7 @@ GameObject:
   - component: {fileID: 2129653927}
   - component: {fileID: 2129653928}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SFX Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7177,7 +7242,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.498
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
