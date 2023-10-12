@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Jelly : MonoBehaviour
 {
-
+    public int tempGelatin;
     float waitTime, speedX, speedY, leftX, rightX, topY, botY;
-    bool isInitialized = false;
+    bool isInitializedX = false, isInitializedY = false;
 
     public GameObject topLeft, bottomRight;
 
@@ -25,6 +25,7 @@ public class Jelly : MonoBehaviour
 
     void Awake()
     {
+        tempGelatin = 1000;
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
 
@@ -35,10 +36,15 @@ public class Jelly : MonoBehaviour
     {
         if (anim.GetBool("isWalk"))
         {
-            if (!isInitialized)
+            if (!isInitializedX)
             {
-                Initialization();
-                isInitialized = true;
+                InitializationX();
+                isInitializedX = true;
+            }
+            if (!isInitializedY)
+            {
+                InitializationY();
+                isInitializedY = true;
             }
             StartCoroutine(Move());
         }
@@ -53,9 +59,19 @@ public class Jelly : MonoBehaviour
             rend.flipX = true;
         else rend.flipX = false;
 
-        if (leftX > transform.position.x || rightX < transform.position.x || topY < transform.position.y || botY > transform.position.y)
+        if (leftX > transform.position.x || rightX < transform.position.x)
         {
-            isInitialized = false;
+            isInitializedX = false;
+        }
+
+        if (topY < transform.position.y || botY > transform.position.y)
+        {
+            isInitializedY = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            tempGelatin++;
         }
     }
 
@@ -70,10 +86,11 @@ public class Jelly : MonoBehaviour
         transform.Translate(new Vector3(speedX * Time.deltaTime, speedY * Time.deltaTime, speedY * Time.deltaTime));
         yield return new WaitForSeconds(waitTime);
         anim.SetBool("isWalk", false);
-        isInitialized = false;
+        isInitializedX = false;
+        isInitializedY = false;
     }
 
-    void Initialization()
+    void InitializationX()
     {
         if (leftX > transform.position.x)
             speedX = Random.Range(0, 0.5f);
@@ -81,7 +98,9 @@ public class Jelly : MonoBehaviour
             speedX = Random.Range(-0.5f, 0);
         else
             speedX = Random.Range(-0.8f, 0.8f);
-
+    }
+    void InitializationY()
+    {
         if (topY < transform.position.y)
             speedY = Random.Range(-0.5f, 0);
         else if (botY > transform.position.y)
