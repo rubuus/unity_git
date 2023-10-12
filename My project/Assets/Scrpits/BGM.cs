@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class BGM : MonoBehaviour
 {
-    GameObject bgm;
-
     AudioSource audioSource;
-    Slider bgmSlider;
+    public Slider bgmSlider;
 
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        bgm = GameObject.Find("BGM Slider");
-        bgmSlider = bgm.GetComponent<Slider>();
     }
     void Update()
     {

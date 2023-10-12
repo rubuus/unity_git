@@ -12,7 +12,6 @@ public class Exit : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
-                
                 Application.Quit();
             }
         }

@@ -1,14 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Resume : MonoBehaviour
 {
-    GameObject parent;
+    public GameObject parent, manager, sfx;
+    AudioGroup[] sfxGroup;
+    AudioSource audioSource;
 
     void Awake()
     {
-        parent = GameObject.Find("Option Panel");
+        sfxGroup = manager.GetComponent<AssetArray>().audioGroup;
+        audioSource = sfx.GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -18,6 +22,8 @@ public class Resume : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
+                audioSource.clip = sfxGroup[6].audioClip;
+                audioSource.Play();
                 parent.SetActive(false);
             }
         }

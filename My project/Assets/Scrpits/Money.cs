@@ -8,11 +8,10 @@ public class Money : MonoBehaviour
     int money;
 
     Text text;
-    GameObject jelly;
+    public GameObject jelly;
 
     void Start()
     {
-        jelly = GameObject.Find("Jelly");
         money = jelly.GetComponent<Jelly>().tempGelatin;
         text = GetComponent<Text>();
         

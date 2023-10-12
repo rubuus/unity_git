@@ -6,11 +6,6 @@ using UnityEngine.UIElements;
 public class CloudA : MonoBehaviour
 {
     float speed = 0.1f;
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
@@ -18,7 +13,5 @@ public class CloudA : MonoBehaviour
             transform.position = new Vector3(-8, 3, 0);
         else
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-        
-        
     }
 }

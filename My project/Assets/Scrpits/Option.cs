@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class Option : MonoBehaviour
 {
-    GameObject resume, exit;
+    public GameObject manager, sfx, optionPanel;
+    AudioGroup[] sfxGroup;
+    AudioSource audioSource;
 
     void Awake()
     {
-        resume = GameObject.Find("Resume Button").gameObject;
-        exit = GameObject.Find ("Exit Button").gameObject;
+        sfxGroup = manager.GetComponent<AssetArray>().audioGroup;
+        audioSource = sfx.GetComponent<AudioSource>();
     }
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (!optionPanel.activeSelf)
         {
-            gameObject.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                audioSource.clip = sfxGroup[5].audioClip;
+                audioSource.Play();
+                optionPanel.SetActive(true);
+            }
         }
     }
 }
