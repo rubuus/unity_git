@@ -24,5 +24,13 @@ public class Option : MonoBehaviour
                 optionPanel.SetActive(true);
             }
         }
+
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                optionPanel.SetActive(false);
+            }
+        }
     }
 }

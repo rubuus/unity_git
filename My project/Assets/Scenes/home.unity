@@ -2409,7 +2409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1, y: 1}
   m_SizeDelta: {x: 20, y: 12}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &691604907
@@ -2663,6 +2663,7 @@ GameObject:
   - component: {fileID: 798026966}
   - component: {fileID: 798026968}
   - component: {fileID: 798026967}
+  - component: {fileID: 798026969}
   m_Layer: 5
   m_Name: Plant Panel
   m_TagString: Untagged
@@ -2729,6 +2730,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798026965}
   m_CullTransparentMesh: 1
+--- !u!95 &798026969
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798026965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c17a07363a463843a7d1af3c55d4714, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &828122824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3028,7 @@ GameObject:
   - component: {fileID: 899531470}
   - component: {fileID: 899531469}
   - component: {fileID: 899531468}
+  - component: {fileID: 899531471}
   m_Layer: 5
   m_Name: Plant Button
   m_TagString: Untagged
@@ -3114,6 +3137,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899531466}
   m_CullTransparentMesh: 1
+--- !u!114 &899531471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899531466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b350350420b5f409e593626526d76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantIsOpened: 0
+  jellyIsOpen: 0
+  plantPanel: {fileID: 798026965}
+  jellyPanel: {fileID: 1024630611}
 --- !u!1 &903642400
 GameObject:
   m_ObjectHideFlags: 0
@@ -6835,6 +6874,7 @@ GameObject:
   - component: {fileID: 2091156932}
   - component: {fileID: 2091156931}
   - component: {fileID: 2091156930}
+  - component: {fileID: 2091156933}
   m_Layer: 5
   m_Name: Jelly Button
   m_TagString: Untagged
@@ -6943,6 +6983,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091156928}
   m_CullTransparentMesh: 1
+--- !u!114 &2091156933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091156928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f580101d3c85e64ea1f9414189b56d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jellyIsOpened: 0
+  plantIsOpen: 0
+  jellyPanel: {fileID: 1024630611}
 --- !u!1 &2112070574
 GameObject:
   m_ObjectHideFlags: 0
