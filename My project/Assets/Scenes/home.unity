@@ -3150,9 +3150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantIsOpened: 0
-  jellyIsOpen: 0
   plantPanel: {fileID: 798026965}
-  jellyPanel: {fileID: 1024630611}
+  jellyPanel: {fileID: 2091156928}
+  optionPanel: {fileID: 496770680}
 --- !u!1 &903642400
 GameObject:
   m_ObjectHideFlags: 0
@@ -6996,8 +6996,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jellyIsOpened: 0
-  plantIsOpen: 0
   jellyPanel: {fileID: 1024630611}
+  plantPanel: {fileID: 899531466}
+  optionPanel: {fileID: 496770680}
 --- !u!1 &2112070574
 GameObject:
   m_ObjectHideFlags: 0
@@ -7264,6 +7265,8 @@ MonoBehaviour:
   manager: {fileID: 2006377302}
   sfx: {fileID: 611716261}
   optionPanel: {fileID: 496770680}
+  jellyPanel: {fileID: 2091156928}
+  plantPanel: {fileID: 899531466}
 --- !u!1 &2129653926
 GameObject:
   m_ObjectHideFlags: 0
