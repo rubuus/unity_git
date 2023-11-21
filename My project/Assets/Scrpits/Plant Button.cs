@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PlantButton : MonoBehaviour
 {
-    bool plantIsOpened = false;
+    public bool plantIsOpened = false;
 
-    public GameObject plantPanel;
-    Animator anim;
+    public GameObject plantPanel, jellyPanel, optionPanel;
+    Animator plantAnim;
 
     void Awake()
     {
-        anim = plantPanel.GetComponent<Animator>();
+        plantAnim = plantPanel.GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (Input.touchCount > 0)
+        /*if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -24,24 +24,23 @@ public class PlantButton : MonoBehaviour
             {
                 anim.SetTrigger("doShow");
             }
-        }
+        }*/
 
-        if (!plantIsOpened)
+        if (Input.GetKeyDown(KeyCode.A) && !plantIsOpened)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            JellyButton jellyButtonScript = jellyPanel.GetComponent<JellyButton>();
+
+            if (!(jellyButtonScript.jellyIsOpened || optionPanel.activeSelf))
             {
-                anim.SetTrigger("doShow");
+                plantAnim.SetTrigger("doShow");
                 plantIsOpened = true;
             }
         }
 
-        else
+        if (Input.GetKeyDown(KeyCode.Escape) && plantIsOpened)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                anim.SetTrigger("doHide");
-                plantIsOpened = false;
-            }
+            plantAnim.SetTrigger("doHide");
+            plantIsOpened = false;  
         }
     }
 }

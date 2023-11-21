@@ -71,7 +71,7 @@ public class Jelly : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            tempGelatin+=100000;
+            tempGelatin += 100000;
         }
     }
 

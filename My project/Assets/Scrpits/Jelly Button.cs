@@ -4,44 +4,43 @@ using UnityEngine;
 
 public class JellyButton : MonoBehaviour
 {
-    bool jellyIsOpened = false;
+    public bool jellyIsOpened = false;
 
-    public GameObject jellyPanel;
-    Animator anim;
+    public GameObject jellyPanel, plantPanel, optionPanel;
+    Animator jellyAnim;
 
     void Awake()
     {
-        anim = jellyPanel.GetComponent<Animator>();
+        jellyAnim = jellyPanel.GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (Input.touchCount > 0)
+        /*if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
             if (touch.phase == TouchPhase.Began)
             {
-                anim.SetTrigger("doShow");
+                jellyAnim.SetTrigger("doShow");
             }
-        }
+        }*/
 
-        if (!jellyIsOpened)
+        if (Input.GetKeyDown(KeyCode.C) && !jellyIsOpened)
         {
-            if (Input.GetKeyDown(KeyCode.C))
+            PlantButton plantButtonScript = plantPanel.GetComponent<PlantButton>();
+
+            if (!(plantButtonScript.plantIsOpened || optionPanel.activeSelf))
             {
-                anim.SetTrigger("doShow");
+                jellyAnim.SetTrigger("doShow");
                 jellyIsOpened = true;
             }
         }
         
-        else
+        if (Input.GetKeyDown(KeyCode.Escape) && jellyIsOpened)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                anim.SetTrigger("doHide");
-                jellyIsOpened = false;
-            }
+            jellyAnim.SetTrigger("doHide");
+            jellyIsOpened = false;
         }
     }
 }

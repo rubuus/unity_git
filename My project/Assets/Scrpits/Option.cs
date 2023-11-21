@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Option : MonoBehaviour
 {
-    public GameObject manager, sfx, optionPanel;
+    public GameObject manager, sfx, optionPanel, jellyPanel, plantPanel;
     AudioGroup[] sfxGroup;
     AudioSource audioSource;
+
+    bool a = false;
 
     void Awake()
     {
@@ -15,22 +17,25 @@ public class Option : MonoBehaviour
     }
     void Update()
     {
-        if (!optionPanel.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                audioSource.clip = sfxGroup[5].audioClip;
-                audioSource.Play();
-                optionPanel.SetActive(true);
-            }
-        }
+            JellyButton jellyButtonScript = jellyPanel.GetComponent<JellyButton>();
+            PlantButton plantButtonScript = plantPanel.GetComponent<PlantButton>();
 
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (!(jellyButtonScript.jellyIsOpened || plantButtonScript.plantIsOpened))
             {
-                optionPanel.SetActive(false);
+                if (optionPanel.activeSelf)
+                {
+                    optionPanel.SetActive(false);
+                }
+                else
+                {
+                    audioSource.clip = sfxGroup[5].audioClip;
+                    audioSource.Play();
+                    optionPanel.SetActive(true);
+                }
             }
         }
     }
+
 }
