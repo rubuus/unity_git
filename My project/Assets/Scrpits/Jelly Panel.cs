@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class JellyPanel : MonoBehaviour
 {
     public int count = 0;
-    public bool[] unlockArray = { true, false, false, false, false, false, false, false, false, false, false};
+    public bool[] unlockArray = { true, true, false, false, false, false, false, false, false, false, false};
     public GameObject prefabToInstantiate, pageText, jellyImage, jellyName, jellyPrice, lockGroup, lockJellyImage, lockJellyPrice;
     public AssetArray assetArray;
     Text pageCountText, jellyNameText, jellyPriceText, lockJellyPriceText;
@@ -78,6 +78,8 @@ public class JellyPanel : MonoBehaviour
 
     public void CreateJelly()
     {
-        Instantiate(prefabToInstantiate, transform.position, Quaternion.identity);
+        GameObject spawedPrefab = Instantiate(prefabToInstantiate, transform.position, Quaternion.identity);
+        Jelly jellyScript = spawedPrefab.GetComponent<Jelly>();
+        jellyScript.ID = count;
     }
 }
