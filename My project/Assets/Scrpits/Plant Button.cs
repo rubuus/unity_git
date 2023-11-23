@@ -40,7 +40,7 @@ public class PlantButton : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && plantIsOpened)
         {
             plantAnim.SetTrigger("doHide");
-            plantIsOpened = false;  
+            plantIsOpened = false;
         }
     }
 }

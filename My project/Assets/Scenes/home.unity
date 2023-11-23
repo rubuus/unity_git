@@ -2598,7 +2598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &798026966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2956,7 +2956,6 @@ GameObject:
   - component: {fileID: 899531470}
   - component: {fileID: 899531469}
   - component: {fileID: 899531468}
-  - component: {fileID: 899531471}
   m_Layer: 5
   m_Name: Plant Button
   m_TagString: Untagged
@@ -3026,7 +3025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 899531469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 931072858}
+        m_TargetAssemblyTypeName: LeftButton, Assembly-CSharp
+        m_MethodName: PlantPanelVisible
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &899531469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3065,22 +3076,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899531466}
   m_CullTransparentMesh: 1
---- !u!114 &899531471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899531466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34b350350420b5f409e593626526d76f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantIsOpened: 0
-  plantPanel: {fileID: 798026965}
-  jellyPanel: {fileID: 2091156928}
-  optionPanel: {fileID: 496770680}
 --- !u!1 &903642400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,6 +3200,7 @@ GameObject:
   - component: {fileID: 931072855}
   - component: {fileID: 931072857}
   - component: {fileID: 931072856}
+  - component: {fileID: 931072858}
   m_Layer: 5
   m_Name: Left Btn
   m_TagString: Untagged
@@ -3273,6 +3269,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931072854}
   m_CullTransparentMesh: 1
+--- !u!114 &931072858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931072854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2a099dd3c48354d891338155d1b49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jellyIsOpened: 0
+  plantIsOpened: 0
+  jellyPanel: {fileID: 1024630611}
+  plantPanel: {fileID: 798026965}
+  optionPanel: {fileID: 496770680}
 --- !u!1 &981255746
 GameObject:
   m_ObjectHideFlags: 0
@@ -6727,7 +6740,6 @@ GameObject:
   - component: {fileID: 2091156932}
   - component: {fileID: 2091156931}
   - component: {fileID: 2091156930}
-  - component: {fileID: 2091156933}
   m_Layer: 5
   m_Name: Jelly Button
   m_TagString: Untagged
@@ -6797,7 +6809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2091156931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 931072858}
+        m_TargetAssemblyTypeName: LeftButton, Assembly-CSharp
+        m_MethodName: JellyPanelVisible
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2091156931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6836,22 +6860,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091156928}
   m_CullTransparentMesh: 1
---- !u!114 &2091156933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091156928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f580101d3c85e64ea1f9414189b56d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jellyIsOpened: 0
-  jellyPanel: {fileID: 1024630611}
-  plantPanel: {fileID: 899531466}
-  optionPanel: {fileID: 496770680}
 --- !u!1 &2112070574
 GameObject:
   m_ObjectHideFlags: 0
@@ -7118,8 +7126,9 @@ MonoBehaviour:
   manager: {fileID: 2006377302}
   sfx: {fileID: 611716261}
   optionPanel: {fileID: 496770680}
-  jellyPanel: {fileID: 2091156928}
-  plantPanel: {fileID: 899531466}
+  leftBtn: {fileID: 931072854}
+  jellyAlive: 0
+  plantAlive: 0
 --- !u!1 &2129653926
 GameObject:
   m_ObjectHideFlags: 0

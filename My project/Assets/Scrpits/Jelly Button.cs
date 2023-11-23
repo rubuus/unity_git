@@ -25,22 +25,22 @@ public class JellyButton : MonoBehaviour
                 jellyAnim.SetTrigger("doShow");
             }
         }*/
-
-        if (Input.GetKeyDown(KeyCode.C) && !jellyIsOpened)
-        {
-            PlantButton plantButtonScript = plantPanel.GetComponent<PlantButton>();
-
-            if (!(plantButtonScript.plantIsOpened || optionPanel.activeSelf))
-            {
-                jellyAnim.SetTrigger("doShow");
-                jellyIsOpened = true;
-            }
-        }
         
         if (Input.GetKeyDown(KeyCode.Escape) && jellyIsOpened)
         {
             jellyAnim.SetTrigger("doHide");
             jellyIsOpened = false;
         }
+    }
+
+    public void OnClick()
+    {
+        PanelView();
+    }
+
+    public void PanelView()
+    {
+        jellyAnim.SetTrigger("doShow");
+        jellyIsOpened = true;
     }
 }
