@@ -9,14 +9,89 @@ public class AssetArray : MonoBehaviour
     public AudioGroup[] audioGroup = new AudioGroup[10];
     void Awake()
     {
-        for (int i = 0; i < koj.Length; i++)
+        koj[0] = new KindOfJelly
         {
-            koj[i] = new KindOfJelly
-            {
-                jellyName = $"Jelly {i}",
-                sprite = Resources.Load<Sprite>($"Jelly {i}"),
-            };
-        }
+            jellyName = "½½¶óÀÓ",
+            sprite = Resources.Load<Sprite>("Jelly 0"),
+            price = 100
+        };
+
+        koj[1] = new KindOfJelly
+        {
+            jellyName = "Á©¸®ºó",
+            sprite = Resources.Load<Sprite>("Jelly 1"),
+            price = 200
+        };
+
+        koj[2] = new KindOfJelly
+        {
+            jellyName = "Æ÷µµ",
+            sprite = Resources.Load<Sprite>("Jelly 2"),
+            price = 500
+        };
+
+        koj[3] = new KindOfJelly
+        {
+            jellyName = "°õµ¹ÀÌ",
+            sprite = Resources.Load<Sprite>("Jelly 3"),
+            price = 1000
+        };
+
+        koj[4] = new KindOfJelly
+        {
+            jellyName = "Çªµù",
+            sprite = Resources.Load<Sprite>("Jelly 4"),
+            price = 1500
+        };
+
+        koj[5] = new KindOfJelly
+        {
+            jellyName = "¾ç°»",
+            sprite = Resources.Load<Sprite>("Jelly 5"),
+            price = 2000
+        };
+
+        koj[6] = new KindOfJelly
+        {
+            jellyName = "³É¹ß¹Ù´Ú",
+            sprite = Resources.Load<Sprite>("Jelly 6"),
+            price = 3000
+        };
+
+        koj[7] = new KindOfJelly
+        {
+            jellyName = "²ÞÆ²ÀÌ",
+            sprite = Resources.Load<Sprite>("Jelly 7"),
+            price = 5000
+        };
+
+        koj[8] = new KindOfJelly
+        {
+            jellyName = "»ó¾î",
+            sprite = Resources.Load<Sprite>("Jelly 8"),
+            price = 7500
+        };
+
+        koj[9] = new KindOfJelly
+        {
+            jellyName = "ÃÊ¹ä",
+            sprite = Resources.Load<Sprite>("Jelly 9"),
+            price = 10000
+        };
+
+        koj[10] = new KindOfJelly
+        {
+            jellyName = "·Î¾â",
+            sprite = Resources.Load<Sprite>("Jelly 10"),
+            price = 25000
+        };
+
+        koj[11] = new KindOfJelly
+        {
+            jellyName = "Áö±¸",
+            sprite = Resources.Load<Sprite>("Jelly 11"),
+            price = 50000
+        };
 
         audioGroup[0] = new AudioGroup
         {
@@ -84,6 +159,7 @@ public class KindOfJelly
 {
     public string jellyName;
     public Sprite sprite;
+    public int price;
 }
 
 public class AudioGroup

@@ -8,8 +8,6 @@ public class Option : MonoBehaviour
     AudioGroup[] sfxGroup;
     AudioSource audioSource;
 
-    bool a = false;
-
     void Awake()
     {
         sfxGroup = manager.GetComponent<AssetArray>().audioGroup;

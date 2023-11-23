@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -946,7 +946,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 195765120}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1024630616}
+        m_TargetAssemblyTypeName: JellyPanel, Assembly-CSharp
+        m_MethodName: LeftBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &195765120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2304,7 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2670,7 +2682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &798026966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2873,6 +2885,7 @@ GameObject:
   - component: {fileID: 863275658}
   - component: {fileID: 863275660}
   - component: {fileID: 863275659}
+  - component: {fileID: 863275661}
   m_Layer: 5
   m_Name: Page Text
   m_TagString: Untagged
@@ -2941,6 +2954,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863275657}
   m_CullTransparentMesh: 1
+--- !u!114 &863275661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863275657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dac9058cca68584eb9cf7c07164e324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jellyPanel: {fileID: 0}
 --- !u!1 &894302084
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,6 +3416,7 @@ GameObject:
   - component: {fileID: 1024630614}
   - component: {fileID: 1024630613}
   - component: {fileID: 1024630615}
+  - component: {fileID: 1024630616}
   m_Layer: 5
   m_Name: Jelly Panel
   m_TagString: Untagged
@@ -3480,6 +3507,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1024630616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024630611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890f5c7a8ac11e24bb8fdb9adf8b44ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
+  lockArray: 010000000000000000000000
+  pageText: {fileID: 863275657}
+  jellyImage: {fileID: 526541899}
+  jellyName: {fileID: 1504814182}
+  jellyPrice: {fileID: 2041046613}
+  lockGroup: {fileID: 1361548741}
+  assetArray: {fileID: 2006377304}
 --- !u!1 &1050489022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,7 +3580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4077,7 +4124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5245,7 +5292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5743,7 +5790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6327,7 +6374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6357,7 +6404,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1961134528}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1024630616}
+        m_TargetAssemblyTypeName: JellyPanel, Assembly-CSharp
+        m_MethodName: RightBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1961134528
 MonoBehaviour:
   m_ObjectHideFlags: 0
