@@ -3520,12 +3520,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
-  lockArray: 010000000000000000000000
+  unlockArray: 010100000000000000000000
   pageText: {fileID: 863275657}
   jellyImage: {fileID: 526541899}
   jellyName: {fileID: 1504814182}
   jellyPrice: {fileID: 2041046613}
   lockGroup: {fileID: 1361548741}
+  lockJellyImage: {fileID: 95880821}
+  lockJellyPrice: {fileID: 112877521}
   assetArray: {fileID: 2006377304}
 --- !u!1 &1050489022
 GameObject:

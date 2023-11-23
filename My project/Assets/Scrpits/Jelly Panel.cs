@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class JellyPanel : MonoBehaviour
 {
     public int count = 0;
-    public bool[] lockArray = { true, true, false, false, false, false, false, false, false, false, false, false};
-    public GameObject pageText, jellyImage, jellyName, jellyPrice, lockGroup;
+    public bool[] unlockArray = { true, false, false, false, false, false, false, false, false, false, false};
+    public GameObject pageText, jellyImage, jellyName, jellyPrice, lockGroup, lockJellyImage, lockJellyPrice;
     public AssetArray assetArray;
-    Text pageCountText, jellyNameText, jellyPriceText;
-    Image jellySprite;
+    Text pageCountText, jellyNameText, jellyPriceText, lockJellyPriceText;
+    Image jellySprite, lockJellySprite;
 
     private void Awake()
     {
@@ -18,6 +18,9 @@ public class JellyPanel : MonoBehaviour
         pageCountText = pageText.GetComponent<Text>();
         jellyNameText = jellyName.GetComponent<Text>();
         jellyPriceText = jellyPrice.GetComponent<Text>();
+
+        lockJellySprite = lockJellyImage.GetComponent<Image>();
+        lockJellyPriceText = lockJellyPrice.GetComponent<Text>();
     }
 
     private void Start()
@@ -27,14 +30,7 @@ public class JellyPanel : MonoBehaviour
 
     void Update()
     {
-        if (!lockArray[count])
-        {
-            lockGroup.SetActive(true);
-        }
-        else
-        {
-            lockGroup.SetActive(false);
-        }
+
     }
 
     public void LeftBtnClick()
@@ -43,7 +39,7 @@ public class JellyPanel : MonoBehaviour
         {
             count--;
             pageCountText.text = string.Format("#{0:D2}", count + 1);
-            UpdateUI();
+            UpdateUI(unlockArray[count]);
         }
     }
 
@@ -53,16 +49,30 @@ public class JellyPanel : MonoBehaviour
         {
             count++;
             pageCountText.text = string.Format("#{0:D2}", count + 1);
-            UpdateUI();
+            UpdateUI(unlockArray[count]);
         }
     }
 
-    private void UpdateUI()
+    private void UpdateUI(bool unlockCheck)
     {
-        jellyNameText.text = assetArray.koj[count].jellyName.ToString();
-        jellyPriceText.text = assetArray.koj[count].price.ToString();
-        jellySprite.sprite = assetArray.koj[count].sprite;
+        if (unlockCheck)
+        {
+            lockGroup.SetActive(false);
 
-        jellySprite.SetNativeSize();
+            jellyNameText.text = assetArray.koj[count].jellyName.ToString();
+            jellyPriceText.text = assetArray.koj[count].price.ToString();
+            jellySprite.sprite = assetArray.koj[count].sprite;
+
+            jellySprite.SetNativeSize();
+        }
+        else
+        {
+            lockGroup.SetActive(true);
+
+            lockJellyPriceText.text = assetArray.koj[count].lockPrice.ToString();
+            lockJellySprite.sprite = assetArray.koj[count].sprite;
+            
+            lockJellySprite.SetNativeSize();
+        }
     }
 }
