@@ -4,37 +4,37 @@ using UnityEngine;
 
 public class Option : MonoBehaviour
 {
-    public GameObject manager, sfx, optionPanel, jellyPanel, plantPanel;
+    public GameObject manager, sfx, optionPanel, leftBtn;
+
+    public bool jellyAlive, plantAlive;
+
     AudioGroup[] sfxGroup;
     AudioSource audioSource;
-
-    bool a = false;
 
     void Awake()
     {
         sfxGroup = manager.GetComponent<AssetArray>().audioGroup;
         audioSource = sfx.GetComponent<AudioSource>();
+
+        jellyAlive = leftBtn.GetComponent<LeftButton>().jellyIsOpened;
+        plantAlive = leftBtn.GetComponent<LeftButton>().plantIsOpened;
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !optionPanel.activeSelf)
         {
-            JellyButton jellyButtonScript = jellyPanel.GetComponent<JellyButton>();
-            PlantButton plantButtonScript = plantPanel.GetComponent<PlantButton>();
-
-            if (!(jellyButtonScript.jellyIsOpened || plantButtonScript.plantIsOpened))
+            if (!(jellyAlive || plantAlive))
             {
-                if (optionPanel.activeSelf)
-                {
-                    optionPanel.SetActive(false);
-                }
-                else
-                {
-                    audioSource.clip = sfxGroup[5].audioClip;
-                    audioSource.Play();
-                    optionPanel.SetActive(true);
-                }
+                audioSource.clip = sfxGroup[5].audioClip;
+                audioSource.Play();
+                optionPanel.SetActive(true);
             }
+                
+        }
+
+        else if (Input.GetKeyDown(KeyCode.K) && optionPanel.activeSelf)
+        {
+            optionPanel.SetActive(false);
         }
     }
 

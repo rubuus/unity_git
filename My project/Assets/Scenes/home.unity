@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -946,7 +946,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 195765120}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1024630616}
+        m_TargetAssemblyTypeName: JellyPanel, Assembly-CSharp
+        m_MethodName: LeftBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &195765120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1944,96 +1956,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b9c04608200d34891f94358962c0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jelly: {fileID: 1694085805}
+  jelly: {fileID: 0}
 --- !u!4 &565093578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8171373853705526922, guid: 31c8c27dfb42da54e9548d06b9d705f3, type: 3}
   m_PrefabInstance: {fileID: 1250002849}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &570658076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 570658077}
-  - component: {fileID: 570658078}
-  m_Layer: 0
-  m_Name: Shadow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &570658077
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570658076}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1694085808}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &570658078
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570658076}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 897c542affa1c624da03b90c105313d5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.125, y: 0.375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &611716261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3028,7 +2956,6 @@ GameObject:
   - component: {fileID: 899531470}
   - component: {fileID: 899531469}
   - component: {fileID: 899531468}
-  - component: {fileID: 899531471}
   m_Layer: 5
   m_Name: Plant Button
   m_TagString: Untagged
@@ -3098,7 +3025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 899531469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 931072858}
+        m_TargetAssemblyTypeName: LeftButton, Assembly-CSharp
+        m_MethodName: PlantPanelVisible
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &899531469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3137,22 +3076,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899531466}
   m_CullTransparentMesh: 1
---- !u!114 &899531471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899531466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34b350350420b5f409e593626526d76f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantIsOpened: 0
-  plantPanel: {fileID: 798026965}
-  jellyPanel: {fileID: 2091156928}
-  optionPanel: {fileID: 496770680}
 --- !u!1 &903642400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,6 +3200,7 @@ GameObject:
   - component: {fileID: 931072855}
   - component: {fileID: 931072857}
   - component: {fileID: 931072856}
+  - component: {fileID: 931072858}
   m_Layer: 5
   m_Name: Left Btn
   m_TagString: Untagged
@@ -3345,6 +3269,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931072854}
   m_CullTransparentMesh: 1
+--- !u!114 &931072858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931072854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2a099dd3c48354d891338155d1b49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jellyIsOpened: 0
+  plantIsOpened: 0
+  jellyPanel: {fileID: 1024630611}
+  plantPanel: {fileID: 798026965}
+  optionPanel: {fileID: 496770680}
 --- !u!1 &981255746
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,6 +3331,7 @@ GameObject:
   - component: {fileID: 1024630614}
   - component: {fileID: 1024630613}
   - component: {fileID: 1024630615}
+  - component: {fileID: 1024630616}
   m_Layer: 5
   m_Name: Jelly Panel
   m_TagString: Untagged
@@ -3480,6 +3422,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1024630616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024630611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890f5c7a8ac11e24bb8fdb9adf8b44ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
+  unlockArray: 010100000000000000000000
+  prefabToInstantiate: {fileID: 5128787035759389690, guid: 8f0388e68ab6ff44ebd110e2f0917d18, type: 3}
+  pageText: {fileID: 863275657}
+  jellyImage: {fileID: 526541899}
+  jellyName: {fileID: 1504814182}
+  jellyPrice: {fileID: 2041046613}
+  lockGroup: {fileID: 1361548741}
+  lockJellyImage: {fileID: 95880821}
+  lockJellyPrice: {fileID: 112877521}
+  assetArray: {fileID: 2006377304}
 --- !u!1 &1050489022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,7 +3498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4077,7 +4042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4107,7 +4072,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1151255485}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1024630616}
+        m_TargetAssemblyTypeName: JellyPanel, Assembly-CSharp
+        m_MethodName: CreateJelly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1151255485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5245,7 +5222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5567,129 +5544,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670081775}
   m_CullTransparentMesh: 1
---- !u!1 &1694085805
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1694085808}
-  - component: {fileID: 1694085807}
-  - component: {fileID: 1694085806}
-  - component: {fileID: 1694085809}
-  m_Layer: 0
-  m_Name: Jelly
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &1694085806
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694085805}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d3842a994495234589cb6d54c1215e2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!212 &1694085807
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694085805}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: f4ba7a5e8b25ae241a6c94d4d6df858d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1694085808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694085805}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 570658077}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1694085809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694085805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c6089d186bcca4479c7c3d16ac368e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tempGelatin: 0
-  topLeft: {fileID: 2073924467}
-  bottomRight: {fileID: 476559992}
 --- !u!1 &1712015064
 GameObject:
   m_ObjectHideFlags: 0
@@ -5743,7 +5597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6327,7 +6181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6357,7 +6211,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1961134528}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1024630616}
+        m_TargetAssemblyTypeName: JellyPanel, Assembly-CSharp
+        m_MethodName: RightBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1961134528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6874,7 +6740,6 @@ GameObject:
   - component: {fileID: 2091156932}
   - component: {fileID: 2091156931}
   - component: {fileID: 2091156930}
-  - component: {fileID: 2091156933}
   m_Layer: 5
   m_Name: Jelly Button
   m_TagString: Untagged
@@ -6944,7 +6809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2091156931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 931072858}
+        m_TargetAssemblyTypeName: LeftButton, Assembly-CSharp
+        m_MethodName: JellyPanelVisible
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2091156931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6983,22 +6860,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091156928}
   m_CullTransparentMesh: 1
---- !u!114 &2091156933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091156928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f580101d3c85e64ea1f9414189b56d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jellyIsOpened: 0
-  jellyPanel: {fileID: 1024630611}
-  plantPanel: {fileID: 899531466}
-  optionPanel: {fileID: 496770680}
 --- !u!1 &2112070574
 GameObject:
   m_ObjectHideFlags: 0
@@ -7265,8 +7126,9 @@ MonoBehaviour:
   manager: {fileID: 2006377302}
   sfx: {fileID: 611716261}
   optionPanel: {fileID: 496770680}
-  jellyPanel: {fileID: 2091156928}
-  plantPanel: {fileID: 899531466}
+  leftBtn: {fileID: 931072854}
+  jellyAlive: 0
+  plantAlive: 0
 --- !u!1 &2129653926
 GameObject:
   m_ObjectHideFlags: 0
@@ -7364,7 +7226,6 @@ SceneRoots:
   - {fileID: 903642403}
   - {fileID: 2006377303}
   - {fileID: 1864527168}
-  - {fileID: 1694085808}
   - {fileID: 1283425132}
   - {fileID: 981255747}
   - {fileID: 2116200319}
