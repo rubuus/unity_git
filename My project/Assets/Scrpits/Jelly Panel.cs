@@ -5,7 +5,7 @@ public class JellyPanel : MonoBehaviour
 {
     public int count = 0;
     public bool[] unlockArray = { true, false, false, false, false, false, false, false, false, false, false};
-    public GameObject pageText, jellyImage, jellyName, jellyPrice, lockGroup, lockJellyImage, lockJellyPrice;
+    public GameObject prefabToInstantiate, pageText, jellyImage, jellyName, jellyPrice, lockGroup, lockJellyImage, lockJellyPrice;
     public AssetArray assetArray;
     Text pageCountText, jellyNameText, jellyPriceText, lockJellyPriceText;
     Image jellySprite, lockJellySprite;
@@ -71,8 +71,13 @@ public class JellyPanel : MonoBehaviour
 
             lockJellyPriceText.text = assetArray.koj[count].lockPrice.ToString();
             lockJellySprite.sprite = assetArray.koj[count].sprite;
-            
+
             lockJellySprite.SetNativeSize();
         }
+    }
+
+    public void CreateJelly()
+    {
+        Instantiate(prefabToInstantiate, transform.position, Quaternion.identity);
     }
 }
