@@ -2274,7 +2274,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 681476535}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 798026970}
+        m_TargetAssemblyTypeName: PlantPanel, Assembly-CSharp
+        m_MethodName: TouchBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &681476535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3558,7 +3570,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1050489025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 798026970}
+        m_TargetAssemblyTypeName: PlantPanel, Assembly-CSharp
+        m_MethodName: QuantityBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1050489025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6444,8 +6468,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempGelatin: 1000
   tempGold: 500
-  quantityJellyValue: 0
-  touchJellyValue: 0
+  quantityJellyValue: 1
+  touchJellyValue: 1
   count: 0
   unlockArray: 0101000000000000000000
 --- !u!1 &2033691572
