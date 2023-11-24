@@ -35,7 +35,6 @@ public class LeftButton : MonoBehaviour
         {
             jellyAnim.SetTrigger("doShow");
             jellyIsOpened = true;
-            Debug.Log(jellyIsOpened);
         }
     }
 

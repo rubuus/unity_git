@@ -1199,7 +1199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 233930879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1024630616}
+        m_TargetAssemblyTypeName: JellyPanel, Assembly-CSharp
+        m_MethodName: Unlocking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &233930879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,10 +1965,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 549229180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23b9c04608200d34891f94358962c0be, type: 3}
+  m_Script: {fileID: 11500000, guid: 39392c0d0cceee1428365d092bdb60c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jelly: {fileID: 0}
+  gameManager: {fileID: 2006377302}
 --- !u!4 &565093578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8171373853705526922, guid: 31c8c27dfb42da54e9548d06b9d705f3, type: 3}
@@ -2592,6 +2604,7 @@ GameObject:
   - component: {fileID: 798026968}
   - component: {fileID: 798026967}
   - component: {fileID: 798026969}
+  - component: {fileID: 798026970}
   m_Layer: 5
   m_Name: Plant Panel
   m_TagString: Untagged
@@ -2679,6 +2692,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &798026970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798026965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409fef1ff8e4ca47be2024d3a7770ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetArray: {fileID: 2006377304}
+  savedValues: {fileID: 2006377305}
+  quantityJelly: {fileID: 1670081775}
+  touchJelly: {fileID: 1985665323}
+  upgradeQuantity: {fileID: 2033691572}
+  upgradeTouch: {fileID: 1097311973}
 --- !u!1 &828122824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,8 +3465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890f5c7a8ac11e24bb8fdb9adf8b44ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  unlockArray: 010100000000000000000000
   prefabToInstantiate: {fileID: 5128787035759389690, guid: 8f0388e68ab6ff44ebd110e2f0917d18, type: 3}
   pageText: {fileID: 863275657}
   jellyImage: {fileID: 526541899}
@@ -3445,6 +3474,7 @@ MonoBehaviour:
   lockJellyImage: {fileID: 95880821}
   lockJellyPrice: {fileID: 112877521}
   assetArray: {fileID: 2006377304}
+  savedValues: {fileID: 2006377305}
 --- !u!1 &1050489022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,6 +6008,7 @@ GameObject:
   - component: {fileID: 1895871513}
   - component: {fileID: 1895871515}
   - component: {fileID: 1895871514}
+  - component: {fileID: 1895871516}
   m_Layer: 5
   m_Name: Gold Text
   m_TagString: Untagged
@@ -6046,6 +6077,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895871512}
   m_CullTransparentMesh: 1
+--- !u!114 &1895871516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895871512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afd8ab839cbf004593e5fdeb177b745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 2006377302}
 --- !u!1 &1904292901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6351,6 +6395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2006377303}
   - component: {fileID: 2006377304}
+  - component: {fileID: 2006377305}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -6385,6 +6430,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ff1ee9ce742dc4bbc839069ef77661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2006377305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006377302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c444620043c2604d83f675d7b4b7c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempGelatin: 1000
+  tempGold: 500
+  quantityJellyValue: 0
+  touchJellyValue: 0
+  count: 0
+  unlockArray: 0101000000000000000000
 --- !u!1 &2033691572
 GameObject:
   m_ObjectHideFlags: 0
