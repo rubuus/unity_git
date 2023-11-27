@@ -73,11 +73,14 @@ public class JellyPanel : MonoBehaviour
 
     public void CreateJelly()
     {
-        if (savedValues.tempGold >= assetArray.koj[savedValues.count].price)
+        if (savedValues.tempGold >= assetArray.koj[savedValues.count].price && savedValues.quantity < savedValues.quantityJellyValue)
         {
             savedValues.tempGold -= assetArray.koj[savedValues.count].price;
             GameObject spawedPrefab = Instantiate(prefabToInstantiate, transform.position, Quaternion.identity);
             Jelly jellyScript = spawedPrefab.GetComponent<Jelly>();
+            savedValues.quantity++;
+            savedValues.idTotal += savedValues.count + 1;
+            savedValues.jellyID.Add(savedValues.count);
             jellyScript.ID = savedValues.count;
         }
     }

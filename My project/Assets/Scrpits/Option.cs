@@ -32,7 +32,7 @@ public class Option : MonoBehaviour
                 
         }
 
-        else if (Input.GetKeyDown(KeyCode.K) && optionPanel.activeSelf)
+        else if (Input.GetKeyDown(KeyCode.Escape) && optionPanel.activeSelf)
         {
             optionPanel.SetActive(false);
         }
