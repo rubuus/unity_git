@@ -160,7 +160,17 @@ public class SavedValues : MonoBehaviour
 
     public void DeleteData()
     {
-        PlayerPrefs.DeleteAll();
+        tempGelatin = 1000;
+        tempGold = 500;
+        quantityJellyValue = 1;
+        jelatinValue = 1;
+        count = 0; 
+        idTotal = 0;
+        quantity = 0;
+        isClear = false;
+        unlockArray[0] = true;
+        unlockArray[1] = true;
+        jellyID.Clear();
         Application.Quit();
     }
 

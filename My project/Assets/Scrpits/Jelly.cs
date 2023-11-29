@@ -130,14 +130,13 @@ public class Jelly : MonoBehaviour
         else
             speedY = Random.Range(-0.8f, 0.8f);
     }
-    Vector2 GetRandomPosition()
+    public Vector2 GetRandomPosition()
     {
-        Vector2 basePosition = transform.position;
-        Vector2 size = new Vector2(-leftX + rightX, -botY + topY);
+        Vector2 topLeftPosition = new Vector2(leftX, topY);
+        Vector2 bottomRightPosition = new Vector2(rightX, botY);
 
-        //x, yÃà ·£´ý ÁÂÇ¥ ¾ò±â
-        float posX = basePosition.x + Random.Range(-size.x / 2f, size.x / 2f);
-        float posY = basePosition.y + 3 + Random.Range(-size.y / 2f, size.y / 2f - 1);
+        float posX = Random.Range(topLeftPosition.x, bottomRightPosition.x);
+        float posY = Random.Range(bottomRightPosition.y, topLeftPosition.y);
 
         Vector2 spawnPos = new Vector2(posX, posY);
 
