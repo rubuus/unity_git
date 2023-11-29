@@ -12,6 +12,7 @@ public class SavedValues : MonoBehaviour
     public bool[] unlockArray = { true, true, false, false, false, false, false, false, false, false, false, false};
     public GameObject prefabToInstantiate;
     public List<int> jellyID = new List<int>();
+
     void Start()
     {
         LoadPlayerData();
@@ -66,7 +67,7 @@ public class SavedValues : MonoBehaviour
 
         for (int i = 0; i < array.Length; i++)
         {
-            str += array[i];
+            str += array[i].ToString();
 
             if (i < array.Length - 1)
             {
@@ -111,14 +112,23 @@ public class SavedValues : MonoBehaviour
     bool[] LoadUnlockArray()
     {
         string[] dataArr = PlayerPrefs.GetString("unlockArray").Split(',');
-        
+
         bool[] array = new bool[dataArr.Length];
 
         for (int i = 0; i < dataArr.Length; i++)
         {
-            Debug.Log(i + dataArr[i]);
-            if (dataArr[i] == "true") { array[i] = true; }
-            if (dataArr[i] == "false") { array[i] = false; }
+            if (dataArr[i].ToLower() == "true")
+            {
+                array[i] = true;
+            }
+            else if (dataArr[i].ToLower() == "false")
+            {
+                array[i] = false;
+            }
+            else
+            {
+                array[i] = false;
+            }
         }
 
         return array;
@@ -132,12 +142,11 @@ public class SavedValues : MonoBehaviour
 
         for (int i = 0; i < dataArr.Length; i++)
         {
-            Debug.Log(dataArr[i]);
+            numbers.Add(int.Parse(dataArr[i]));
         }
 
         return numbers;
     }
-
 
     void LoadJellyObj(List<int> list)
     {
@@ -147,6 +156,12 @@ public class SavedValues : MonoBehaviour
             Jelly jellyScript = spawedPrefab.GetComponent<Jelly>();
             jellyScript.ID = list[i];
         }
+    }
+
+    public void DeleteData()
+    {
+        PlayerPrefs.DeleteAll();
+        Application.Quit();
     }
 
     void OnApplicationQuit()

@@ -10,7 +10,7 @@ public class PlantPanel : MonoBehaviour
     public GameObject quantityJelly, jelatin, upgradeQuantity, upgradeJelatin;
     Text quantityJellyText, jelatinText, upgradeQuantityText, upgradeJelatinText;
 
-    void Awake()
+    private void Start()
     {
         assetArray = FindObjectOfType<AssetArray>();
         savedValues = FindObjectOfType<SavedValues>();
@@ -21,7 +21,7 @@ public class PlantPanel : MonoBehaviour
         upgradeJelatinText = upgradeJelatin.GetComponent<Text>();
     }
 
-    private void Start()
+    void Update()
     {
         quantityJellyText.text = string.Format("Á©¸® ¼ö¿ë·® {0}", savedValues.quantityJellyValue);
         jelatinText.text = string.Format("Á©¶óÆ¾ »ý»ê x {0}", (savedValues.jelatinValue + 1));
@@ -35,8 +35,6 @@ public class PlantPanel : MonoBehaviour
         {
             savedValues.tempGold -= savedValues.quantityJellyValue * 300;
             savedValues.quantityJellyValue++;
-            quantityJellyText.text = string.Format("Á©¸® ¼ö¿ë·® {0}", savedValues.quantityJellyValue);
-            upgradeQuantityText.text = ChangeCommaText(savedValues.quantityJellyValue * 300);
         }
     }
 
@@ -46,8 +44,6 @@ public class PlantPanel : MonoBehaviour
         {
             savedValues.tempGold -= savedValues.jelatinValue * 2000;
             savedValues.jelatinValue++;
-            jelatinText.text = string.Format("Á©¶óÆ¾ »ý»ê x {0}", (savedValues.jelatinValue + 1));
-            upgradeJelatinText.text = ChangeCommaText(savedValues.jelatinValue * 2000);
         }
     }
 

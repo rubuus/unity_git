@@ -28,14 +28,19 @@ public class Option : MonoBehaviour
                 audioSource.clip = sfxGroup[5].audioClip;
                 audioSource.Play();
                 optionPanel.SetActive(true);
-            }
-                
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Escape) && optionPanel.activeSelf)
-        {
-            optionPanel.SetActive(false);
+            } 
         }
     }
 
+    public void Resume()
+    {
+        audioSource.clip = sfxGroup[6].audioClip;
+        audioSource.Play();
+        optionPanel.SetActive(false);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

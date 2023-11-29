@@ -8,6 +8,7 @@ public class LeftButton : MonoBehaviour
 
     public GameObject jellyPanel, plantPanel, optionPanel;
     Animator jellyAnim, plantAnim;
+
     void Awake()
     {
         jellyAnim = jellyPanel.GetComponent<Animator>();
