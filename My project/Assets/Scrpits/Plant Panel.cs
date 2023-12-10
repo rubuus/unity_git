@@ -24,9 +24,9 @@ public class PlantPanel : MonoBehaviour
     void Update()
     {
         quantityJellyText.text = string.Format("Á©¸® ¼ö¿ë·® {0}", savedValues.quantityJellyValue);
-        jelatinText.text = string.Format("Á©¶óÆ¾ »ý»ê x {0}", (savedValues.jelatinValue + 1));
+        jelatinText.text = string.Format("Á©¶óÆ¾ »ý»ê x {0}", savedValues.jelatinValue);
         upgradeQuantityText.text = ChangeCommaText(savedValues.quantityJellyValue * 300);
-        upgradeJelatinText.text = ChangeCommaText(savedValues.jelatinValue * 2000);
+        upgradeJelatinText.text = ChangeCommaText(savedValues.jelatinValue * 500);
     }
 
     public void QuantityBtnClick()
@@ -40,9 +40,9 @@ public class PlantPanel : MonoBehaviour
 
     public void JelatinBtnClick()
     {
-        if (savedValues.tempGold >= savedValues.jelatinValue * 2000)
+        if (savedValues.tempGold >= savedValues.jelatinValue * 500)
         {
-            savedValues.tempGold -= savedValues.jelatinValue * 2000;
+            savedValues.tempGold -= savedValues.jelatinValue * 500;
             savedValues.jelatinValue++;
         }
     }

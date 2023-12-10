@@ -16,7 +16,7 @@ public class SavedValues : MonoBehaviour
     void Start()
     {
         LoadPlayerData();
-        InvokeRepeating("PlusGelatin", 2f, 2f);
+        InvokeRepeating("PlusGelatin", 1f, 1f);
     }
 
     void Update()
@@ -168,9 +168,21 @@ public class SavedValues : MonoBehaviour
         idTotal = 0;
         quantity = 0;
         isClear = false;
-        unlockArray[0] = true;
-        unlockArray[1] = true;
+
+        for (int i = 0; i < unlockArray.Length; i++)
+        {
+            unlockArray[i] = i == 0;
+        }
+
         jellyID.Clear();
+        CancelInvoke("PlusGelatin");
+        StartCoroutine(DelayedQuit());
+    }
+
+    IEnumerator DelayedQuit()
+    {
+        yield return new WaitForSeconds(0.5f);
+
         Application.Quit();
     }
 
